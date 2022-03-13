@@ -8,15 +8,17 @@ let map = L.map('mapid').setView([40.7, -94.5], 4);
 // let marker = L.marker([34.0522, -118.2437]).addTo(map);
 
 // Add a circle to the map
-L.circle([34.0522, -118.2437], {
-    radius: 100
- }).addTo(map);
+// L.circle([34.0522, -118.2437], {
+//     radius: 100
+//  }).addTo(map);
 
  // Skill Drill - add light-yellow circle with black lines with 300 meter radius of Central LA
-//  L.circle([34.0522, -118.2437], {
-//     radius: 300
+ L.circleMarker([34.0522, -118.2437], {
+    radius: 300,
+    color: "black",
+    fillColor: '#ffffa1'
     
-//  }).addTo(map);
+ }).addTo(map);
 
 //  let streets = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -31,7 +33,7 @@ L.circle([34.0522, -118.2437], {
 // We create the tile layer that will be the background of our map.
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
+    maxZoom: 1800,
     id: 'mapbox/streets-v11',
     accessToken: API_KEY
 });
